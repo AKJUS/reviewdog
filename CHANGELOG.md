@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### :sparkles: Release Note <!-- optional -->
 
+The Homebrew package has migrated from a formula to a cask. Install it with `brew install --cask reviewdog/tap/reviewdog`.
+
 ### :rocket: Enhancements
 
 ### :bug: Fixes
@@ -20,11 +22,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [#2257](https://github.com/reviewdog/reviewdog/pull/2257) Use -trimpath flag for reproducible build
 - [#2513](https://github.com/reviewdog/reviewdog/pull/2513) Drop support of windows/arm
 - [#2543](https://github.com/reviewdog/reviewdog/pull/2543) Update `gitlab-mr-discussion` reporter to embed a fingerprint meta-comment in each posted note and automatically resolve previously-posted discussions whose diagnostic is no longer reported (fixes [#1150](https://github.com/reviewdog/reviewdog/issues/1150)).
+- [#2747](https://github.com/reviewdog/reviewdog/pull/2747) Update `gitea-pr-review` reporter to be on par with `github-pr-review`: report results outside the diff context as pull request comments, fallback to Actions logging commands for results outside the diff file and honor the `-level` flag.
 
 ### :bug: Fixes
 
 - [#2586](https://github.com/reviewdog/reviewdog/pull/2586) Honor SARIF `result.suppressions` in SARIF parser — suppressed results (per SARIF 2.1.0 §3.27.23 / §3.35) no longer emit diagnostics
 - [#2481](https://github.com/reviewdog/reviewdog/pull/2481) Use CWD instead of git root in SARIF parser to prevent path doubling
+- [#2663](https://github.com/reviewdog/reviewdog/pull/2663) Fix deadlock when parsing too-long RDJSONL lines.
 
 ### :rotating_light: Breaking changes
 - doghouse: the `/check` endpoint (used by `-reporter=github-pr-check` via reviewdog.app) now always requires `REVIEWDOG_TOKEN`. The previous shortcut that accepted requests from certain CI providers without a token has been removed. Users who relied on the token-less path (e.g. AppVeyor) must now set `REVIEWDOG_TOKEN` explicitly. Tokens can be obtained from `https://reviewdog.app/gh/<owner>/<repo-name>`.
