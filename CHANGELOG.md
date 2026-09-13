@@ -8,6 +8,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### :sparkles: Release Note <!-- optional -->
 
+### :rocket: Enhancements
+
+### :bug: Fixes
+
+### :rotating_light: Breaking changes
+
+## [v0.21.1] - 2026-06-12
+
+### :sparkles: Release Note
+
 The Homebrew package has migrated from a formula to a cask. Install it with `brew install --cask reviewdog/tap/reviewdog`.
 
 ### :rocket: Enhancements
@@ -322,7 +332,8 @@ $ cd subdir/ && reviewdog -filter-mode=file -fail-on-error -reporter=github-pr-r
 
 See https://github.com/reviewdog/reviewdog/releases for older release note.
 
-[Unreleased]: https://github.com/reviewdog/reviewdog/compare/v0.21.0...HEAD
+[Unreleased]: https://github.com/reviewdog/reviewdog/compare/v0.21.1...HEAD
+[v0.21.1]: https://github.com/reviewdog/reviewdog/compare/v0.21.0...v0.21.1
 [v0.21.0]: https://github.com/reviewdog/reviewdog/compare/v0.20.3...v0.21.0
 [v0.10.0]: https://github.com/reviewdog/reviewdog/compare/v0.9.17...v0.10.0
 [v0.10.1]: https://github.com/reviewdog/reviewdog/compare/v0.10.0...v0.10.1
